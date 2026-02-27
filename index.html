@@ -868,11 +868,11 @@ function sendEmail() {
   btn.disabled = true;
 
   var templateParams = {
-    from_name:  firstName + ' ' + lastName,
-    from_email: email,
-    event_type: eventType || 'Not specified',
-    message:    message,
-    reply_to:   email
+    user_name:    firstName + ' ' + lastName,
+    user_email:   email,
+    user_subject: 'Event Inquiry: ' + (eventType || 'General'),
+    Message:      message,
+    reply_to:     email
   };
 
   emailjs.send('service_g56in3b', 'template_bl9twwf', templateParams)
