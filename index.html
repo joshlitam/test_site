@@ -875,7 +875,7 @@ function sendEmail() {
     reply_to:     email
   };
 
-  emailjs.send('service_g56in3b', 'template_bl9twwf', templateParams)
+  emailjs.send('service_g56in3b', 'template_bl9twwf', templateParams, '5eiOKmD3Rtab5f-Lq')
     .then(function() {
       showToast('✅ Inquiry sent! We will be in touch soon.', false);
       btn.textContent = 'Send Message →';
