@@ -886,7 +886,8 @@ function sendEmail() {
       document.getElementById('eventType').value = '';
       document.getElementById('message').value   = '';
     }, function(error) {
-      showToast('❌ Something went wrong. Please try again.', true);
+      console.error('EmailJS error:', JSON.stringify(error));
+      showToast('❌ Error ' + (error.status || '') + ': ' + (error.text || 'Something went wrong.'), true);
       btn.textContent = 'Send Message →';
       btn.disabled = false;
     });
