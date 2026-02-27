@@ -1479,16 +1479,15 @@ function sendEmail() {
   btn.disabled = true;
 
   emailjs.send(
-    'service_g56in3b',
-    'template_7tzz5pn',
+    "service_g56in3b",
+    "template_7tzz5pn",
     {
       user_name:    firstName + ' ' + lastName,
       user_email:   email,
       user_subject: 'Event Inquiry: ' + (eventType || 'General'),
       Message:      message,
       reply_to:     email
-    },
-    '5eiOKmD3Rtab5f-Lq'
+    }
   ).then(function(response) {
     console.log('SUCCESS', response.status, response.text);
     showToast('Inquiry sent! We will be in touch soon.', false);
